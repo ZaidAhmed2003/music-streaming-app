@@ -1,9 +1,7 @@
-  
-  
   <!-- Bootstrap JS -->
-  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="<?= ROOT_URL ?>node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <!-- JQuery -->
-  <script src="node_modules/jquery/dist/jquery.min.js"></script>
-</body>
+  <script src="<?= ROOT_URL ?>node_modules/jquery/dist/jquery.min.js"></script>
+  </body>
 
-</html>
+  </html>

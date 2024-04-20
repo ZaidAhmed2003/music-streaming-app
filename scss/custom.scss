@@ -1,0 +1,18 @@
+// Include all of Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1260px,
+);
+
+// Navbar
+
+$navbar-padding-y: $spacer * 1.125;
+
+.navbar {
+  --#{$prefix}navbar-padding-y: #{$navbar-padding-y};
+}
