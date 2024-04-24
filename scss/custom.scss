@@ -1,4 +1,9 @@
-// Include all of Bootstrap
+// Variable overrides first
+
+$enable-shadows: true;
+@import "navbar";
+
+// Then import Bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 $container-max-widths: (
@@ -9,10 +14,14 @@ $container-max-widths: (
   xxl: 1260px,
 );
 
-// Navbar
+@each $breakpoint, $container-max-width in $container-max-widths {
+  .container-#{$breakpoint} {
+    @extend .container-fluid;
+  }
 
-$navbar-padding-y: $spacer * 1.125;
-
-.navbar {
-  --#{$prefix}navbar-padding-y: #{$navbar-padding-y};
+  @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+    %responsive-container-#{$breakpoint} {
+      max-width: $container-max-width;
+    }
+  }
 }
